@@ -8,9 +8,9 @@ const ayarlar = require("./ayarlar.json");
 
 client.on("ready", () => {
 
-  client.user.setActivity(ayarlar.PREFIX+" - " + client.users.cache.size + " kişi ve " + client.guilds.cache.size + " sunucuda", { type: "STREAMING", url: "https://twitch.tv/rootcf" })
+  client.user.setActivity(ayarlar.PREFIX+" - " + client.users.cache.size + " user and " + client.guilds.cache.size + " server", { type: "STREAMING", url: "https://twitch.tv/rootcf" })
 
-  console.log('BOT AKTİF!');
+  console.log('Online!');
 });
 client.on("warn", info => console.log(info));
 
@@ -62,7 +62,7 @@ client.on("message", async message => {
 
     } catch (err) {
       console.log(err)
-      message.reply("Bir hata oluştu!")
+      message.reply("Something happened!")
     }
 
   }
