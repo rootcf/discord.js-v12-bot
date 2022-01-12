@@ -3,12 +3,12 @@ const discord = require("discord.js")
 const client = new discord.Client({ disableEveryone: true });
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const ayarlar = require("./ayarlar.json");
+const config = require("./config.json");
 
 
 client.on("ready", () => {
 
-  client.user.setActivity(ayarlar.PREFIX+" - " + client.users.cache.size + " user and " + client.guilds.cache.size + " server", { type: "STREAMING", url: "https://twitch.tv/rootcf" })
+  client.user.setActivity(config.PREFIX+" - " + client.users.cache.size + " user and " + client.guilds.cache.size + " server", { type: "STREAMING", url: "https://twitch.tv/rootcf" })
 
   console.log('Online!');
 });
@@ -18,7 +18,7 @@ client.on("error", console.error)
 
 client.commands = new discord.Collection()
 client.alias = new Collection()
-client.prefix = ayarlar.PREFIX
+client.prefix = config.PREFIX
 client.queue = new Map();
 
 const cmdFiles = readdirSync(join(__dirname, "commands")).filter(file => file.endsWith(".js"))
@@ -40,9 +40,9 @@ client.on("message", async message => {
   if (message.author.bot) return;
   if (!message.guild) return;
 
-  if (message.content.startsWith(ayarlar.PREFIX)) {
+  if (message.content.startsWith(config.PREFIX)) {
 
-    const args = message.content.slice(ayarlar.PREFIX.length).trim().split(/ +/)
+    const args = message.content.slice(config.PREFIX.length).trim().split(/ +/)
     const command = args.shift().toLowerCase();
 
     if (!client.commands.has(command) && !client.alias.has(command)) {
@@ -69,4 +69,4 @@ client.on("message", async message => {
 
 });
 
-client.login(ayarlar.TOKEN)
+client.login(config.TOKEN)
