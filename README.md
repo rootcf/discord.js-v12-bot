@@ -1,4 +1,4 @@
-# Discord v12 Empty Bot
+# Discord v12 Basic Bot Template
 
 It's free to use or commercial. It's up to you.
 
