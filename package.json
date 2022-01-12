@@ -1,14 +1,14 @@
 {
-  "name": "v12-altyapi",
+  "name": "v12-bot",
   "version": "1.0.0",
-  "description": "v12 boş altyapı",
+  "description": "v12 empty bot by rootcf",
   "main": "bot.js",
   "scripts": {
     "test": "node bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "#"
+    "url": "https://github.com/rootcf/discord.js-12-bot"
   },
   "keywords": [
     "v12"
