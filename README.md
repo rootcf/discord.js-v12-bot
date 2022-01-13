@@ -1,6 +1,6 @@
 # Discord v12 Basic Bot Template
 
-It's free to use or commercial. It's up to you.
+It's free to use commercial. It's up to you.
 
 If you have NodeJS already, use this command to install v12 discord.js
 
