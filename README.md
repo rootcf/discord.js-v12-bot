@@ -14,3 +14,6 @@ Run your Discord bot with
 ```js
 node bot.js
 ```
+
+# For Glitch Users
+You can remix this project by clicking [here](https://glitch.com/edit/#!/remix/rootcf-v12)
