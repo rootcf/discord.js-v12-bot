@@ -24,7 +24,7 @@ client.queue = new Map();
 const cmdFiles = readdirSync(join(__dirname, "commands")).filter(file => file.endsWith(".js"))
 for (const file of cmdFiles) {
   let pull = require(`./commands/${file}`);
-  console.log(`Loading Command -> ${pul.name}`);
+  console.log(`Loading Command -> ${pull.name}`);
   const command = require(join(__dirname, "commands", file))
   client.commands.set(command.name, command)
 
